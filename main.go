@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"strings"
 
 	"github.com/amagimedia/seshat/pkg"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -14,7 +15,7 @@ func main() {
 	server := pkg.Server{}
 	server.Mount(e)
 
-	isLambda := os.Getenv("LAMBDA")
+	isLambda := strings.ToUpper(os.Getenv("LAMBDA"))
 
 	if isLambda == "TRUE" {
 		lambdaAdapter := &pkg.LambdaAdapter{Echo: e}

@@ -16,6 +16,116 @@
   version = "v1.17.0"
 
 [[projects]]
+  digest = "1:d028fa1f1f6ef46700b87ca5854e295d5c2fd7110d4e247b61c8845d817b6fb0"
+  name = "github.com/aws/aws-sdk-go"
+  packages = [
+    "aws",
+    "aws/awserr",
+    "aws/awsutil",
+    "aws/client",
+    "aws/client/metadata",
+    "aws/corehandlers",
+    "aws/credentials",
+    "aws/credentials/ec2rolecreds",
+    "aws/credentials/endpointcreds",
+    "aws/credentials/processcreds",
+    "aws/credentials/stscreds",
+    "aws/crr",
+    "aws/csm",
+    "aws/defaults",
+    "aws/ec2metadata",
+    "aws/endpoints",
+    "aws/request",
+    "aws/session",
+    "aws/signer/v4",
+    "internal/context",
+    "internal/ini",
+    "internal/sdkio",
+    "internal/sdkmath",
+    "internal/sdkrand",
+    "internal/sdkuri",
+    "internal/shareddefaults",
+    "internal/strings",
+    "internal/sync/singleflight",
+    "private/protocol",
+    "private/protocol/json/jsonutil",
+    "private/protocol/jsonrpc",
+    "private/protocol/query",
+    "private/protocol/query/queryutil",
+    "private/protocol/rest",
+    "private/protocol/xml/xmlutil",
+    "service/dynamodb",
+    "service/dynamodb/dynamodbattribute",
+    "service/dynamodb/dynamodbiface",
+    "service/sts",
+    "service/sts/stsiface",
+  ]
+  pruneopts = ""
+  revision = "1f57dbf66e23e62fa8b40039709c45afdd53e6d8"
+  version = "v1.32.6"
+
+[[projects]]
+  digest = "1:27a44a693abe815173ff862b763f95ccc228dd788fbfb71d7d15699048b49d74"
+  name = "github.com/cenkalti/backoff"
+  packages = ["."]
+  pruneopts = ""
+  revision = "18fe4ce5a8550e0d0919b680ad3c080a5455bddf"
+  version = "v4.0.2"
+
+[[projects]]
+  digest = "1:9b65ba1b0091274d19622cdb1f230771df68716ab9ca340c44e45597a72e290b"
+  name = "github.com/go-playground/locales"
+  packages = [
+    ".",
+    "currency",
+  ]
+  pruneopts = ""
+  revision = "9f105231d3a5f6877a2bf8321dfa15ea6f844b1b"
+  version = "v0.13.0"
+
+[[projects]]
+  digest = "1:b7edb31103e55ef4cf5f6a2b790b34f68f1209590f7f8008115ca09f1fa2a853"
+  name = "github.com/go-playground/universal-translator"
+  packages = ["."]
+  pruneopts = ""
+  revision = "f87b1403479a348651dbf5f07f5cc6e5fcf07008"
+  version = "v0.17.0"
+
+[[projects]]
+  digest = "1:c6fce73d285cab6da8edb0b095b4393d75fa8a5fef86f9a3390e949a654d9e1f"
+  name = "github.com/go-playground/validator"
+  packages = ["."]
+  pruneopts = ""
+  revision = "ea924ce89a4774b8017143b34b946db46add9df1"
+  version = "v10.3.0"
+
+[[projects]]
+  digest = "1:fd608a9f543f30dd5a086b2cdd0bce71b65bca62798ff7ce21348806cdf1412d"
+  name = "github.com/gofrs/uuid"
+  packages = ["."]
+  pruneopts = ""
+  revision = "abfe1881e60ef34074c1b8d8c63b42565c356ed6"
+  version = "v3.3.0"
+
+[[projects]]
+  digest = "1:20fc509f386ca0a09f30658a5e4eccdb878d3688c4e9c00d9c9cbf8626b5bb45"
+  name = "github.com/guregu/dynamo"
+  packages = [
+    ".",
+    "internal/exprs",
+  ]
+  pruneopts = ""
+  revision = "030e5eaaa355cc89d69099f43ba1fd9fac5fa3aa"
+  version = "v1.8.0"
+
+[[projects]]
+  digest = "1:13fe471d0ed891e8544eddfeeb0471fd3c9f2015609a1c000aefdedf52a19d40"
+  name = "github.com/jmespath/go-jmespath"
+  packages = ["."]
+  pruneopts = ""
+  revision = "c2b33e84"
+
+[[projects]]
   digest = "1:6e56bb87f304f067711c61e73d2d89ac12173de720f225d216ca087c3ebbdafa"
   name = "github.com/labstack/echo"
   packages = ["."]
@@ -35,6 +145,14 @@
   version = "v0.3.0"
 
 [[projects]]
+  digest = "1:eadc94347700e0ea690190ca59cbe66cd9997633fee4344206419e6fc878373e"
+  name = "github.com/leodido/go-urn"
+  packages = ["."]
+  pruneopts = ""
+  revision = "a0f5013415294bb94553821ace21a1a74c0298cc"
+  version = "v1.2.0"
+
+[[projects]]
   digest = "1:eab986cd0513d271bb1fd9c9d12acd7eb4cfd57cb604122c65bd0914e4637619"
   name = "github.com/mattn/go-colorable"
   packages = ["."]
@@ -51,6 +169,14 @@
   version = "v0.0.12"
 
 [[projects]]
+  digest = "1:a9ac823421527eaf6566301956cc5ae6dc312f4c0746afc0aa2f23b96f6458bd"
+  name = "github.com/rs/xid"
+  packages = ["."]
+  pruneopts = ""
+  revision = "15d26544def341f036c5f8dca987a4cbe575032c"
+  version = "v1.2.1"
+
+[[projects]]
   digest = "1:857a9ecd5cb13379ecc8f798f6e6b6b574c98b9355657d91e068275f1120aaf7"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
@@ -59,12 +185,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:c8b536f08002f0916e288eb66b7d961e3a854542f50532255a7c737edd22987a"
+  digest = "1:780a49595edbd355aad4e7de9ff6d6b497990cce9dded8a95bd442b00e2f4385"
   name = "github.com/valyala/fasttemplate"
   packages = ["."]
   pruneopts = ""
-  revision = "8fcc7a99b5795b7c3e95172237cf93282fc339a9"
-  version = "v1.1.0"
+  revision = "05015c3ec18b8e273134e723a9d4fedee5849cd1"
+  version = "v1.1.1"
 
 [[projects]]
   branch = "master"
@@ -82,6 +208,7 @@
   digest = "1:7254fd3f1a6e5ae98ab721ce6f3f09a79a59d3a1426e045fabc2548101e37333"
   name = "golang.org/x/net"
   packages = [
+    "context",
     "http/httpguts",
     "http2",
     "http2/h2c",
@@ -133,7 +260,12 @@
   input-imports = [
     "github.com/aws/aws-lambda-go/events",
     "github.com/aws/aws-lambda-go/lambda",
+    "github.com/aws/aws-sdk-go/aws",
+    "github.com/aws/aws-sdk-go/aws/session",
+    "github.com/go-playground/validator",
+    "github.com/guregu/dynamo",
     "github.com/labstack/echo",
+    "github.com/rs/xid",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
