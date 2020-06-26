@@ -10,9 +10,8 @@ import (
 
 type (
 	Agent struct {
-		ID      int64     `localIndex:"ID-Seq-index,range"`
 		Code    string    `dynamo:"code,hash" json:"code"`
-		Secret  string    `json:"-"`
+		Secret  string    `dynamo:"secret" json:"-"`
 		Time    time.Time `dynamo:"time,range" json:"time"`
 		Name    string    `dynamo:"name" json:"name" validate:"required"`
 		Type    string    `dynamo:"type" json:"type" validate:"required"`

@@ -27,7 +27,7 @@ provider:
   environment:
         LAMBDA: "TRUE"
         REGION: us-east-1
-        JOB_TABLE: 'seshat-jobs-${opt:stage, self:provider.stage}'
+        JOB_TABLE: 'seshat-jobs-${opt:stage, self:provider.stage}-v1'
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -57,14 +57,26 @@ functions:
   
 resources:
   Resources:
-    GoCrudDynamoDbTable:
+    seshatJobsTable:
       Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
+      #DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
           - AttributeName: code
             AttributeType: S
           - AttributeName: time
+            AttributeType: S
+          - AttributeName: secret
+            AttributeType: S
+          - AttributeName: name
+            AttributeType: S
+          - AttributeName: type
+            AttributeType: S
+          - AttributeName: blip
+            AttributeType: S
+          - AttributeName: account
+            AttributeType: S
+          - AttributeName: feed
             AttributeType: S
         KeySchema:
           - AttributeName: code
@@ -74,4 +86,33 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        TableName: 'seshat-jobs-${opt:stage, self:provider.stage}'
+        TableName: 'seshat-jobs-${opt:stage, self:provider.stage}-v1'
+        GlobalSecondaryIndexes:
+        - IndexName: byBlip
+          KeySchema:
+          - AttributeName: blip
+            KeyType: HASH
+          - AttributeName: feed
+            KeyType: RANGE
+          Projection:
+            NonKeyAttributes:
+            - code
+            - time
+            ProjectionType: INCLUDE
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+        LocalSecondaryIndexes:
+        - IndexName: byName
+          KeySchema:
+          - AttributeName: type
+            KeyType: HASH
+          - AttributeName: name
+            KeyType: RANGE
+          Projection:
+            NonKeyAttributes:
+            - account
+            - blip
+            - feed
+            - secret
+            ProjectionType: INCLUDE
